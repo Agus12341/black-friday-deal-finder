@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TagDrop - Black Friday Deal Finder 2026</title>
+<meta name="description" content="Real Black Friday and Cyber Monday 2026 deals, found and price-checked by hand, each with its store link, usual price and the time it was checked.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23ffd21f'/%3E%3Ctext x='16' y='23' font-size='17' font-family='Arial' font-weight='900' text-anchor='middle' fill='%23111111'%3E%25%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <span class="brand-mark">TAG</span><span class="brand-mark brand-mark-alt">DROP</span>
+      <span class="brand-sub">Black Friday Deal Finder 2026</span>
+    </div>
+    <p class="header-pitch">Real deals, checked one by one. Every price below was read at the store or in a named deals source on the day shown - no scraped filler, no made-up discounts.</p>
+    <dl class="summary-strip" id="summary-strip">
+      <div class="stat"><dt>Deals checked</dt><dd id="stat-count">-</dd></div>
+      <div class="stat"><dt>Stores covered</dt><dd id="stat-stores">-</dd></div>
+      <div class="stat"><dt>Biggest discount</dt><dd id="stat-biggest">-</dd></div>
+      <div class="stat"><dt>Prices checked</dt><dd id="stat-checked">-</dd></div>
+    </dl>
+  </div>
+</header>
+
+<main class="page">
+  <section class="toolbar" aria-label="Search and filter deals">
+    <label class="field field-search">
+      <span>Search deals</span>
+      <input id="search-input" type="search" placeholder="Try: headphones, LEGO, 4K TV, air fryer..." autocomplete="off">
+    </label>
+    <label class="field">
+      <span>Category</span>
+      <select id="category-select"><option value="">All categories</option></select>
+    </label>
+    <label class="field">
+      <span>Store</span>
+      <select id="store-select"><option value="">All stores</option></select>
+    </label>
+    <label class="field">
+      <span>Minimum discount</span>
+      <select id="discount-select">
+        <option value="0">Any discount</option>
+        <option value="20">20% off or more</option>
+        <option value="30">30% off or more</option>
+        <option value="40">40% off or more</option>
+        <option value="50">50% off or more</option>
+      </select>
+    </label>
+    <label class="field">
+      <span>Sort by</span>
+      <select id="sort-select">
+        <option value="discount">Biggest discount</option>
+        <option value="savings">Biggest saving ($)</option>
+        <option value="price-low">Price: low to high</option>
+        <option value="price-high">Price: high to low</option>
+      </select>
+    </label>
+    <label class="field field-check">
+      <input id="newlow-toggle" type="checkbox">
+      <span>New lows only</span>
+    </label>
+  </section>
+
+  <p class="result-count" id="result-count" role="status"></p>
+  <section class="deal-grid" id="deal-grid" aria-live="polite"></section>
+  <p class="no-results" id="no-results" hidden>No deals match that combination. Loosen a filter or clear the search.</p>
+</main>
+
+<footer class="site-footer">
+  <p><strong>How to read the badges.</strong> <span class="badge badge-newlow">New low</span> means the source we read tracks this as the lowest price seen for the product. <span class="badge badge-strong">Strong price</span> is a genuinely good price worth acting on. <span class="badge badge-routine">Routine sale</span> is honest but unremarkable - the same cut this product gets most sale weeks. Each card shows the evidence line we based that on.</p>
+  <p>Prices were checked on Friday 27 November 2026 (Asia/Jakarta) at the time on each card and can change or sell out. The store link on each card goes to the product page at that store; the source named on the card is where the price was read.</p>
+</footer>
+
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
